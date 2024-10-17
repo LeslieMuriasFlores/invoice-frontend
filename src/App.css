@@ -1,0 +1,195 @@
+/* src/App.css */
+
+/* Importa la fuente Roboto desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  background-color: #f8f9fa; /* Color de fondo suave */
+  font-family: 'Arial', sans-serif; /* Tipografía general */
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Estilos del header */
+header {
+  position: relative; /* Relativo para que el texto absoluto se posicione respecto a este contenedor */
+  background-color: #f1f3f5; /* Cambiado a un fondo más claro para mejor contraste */
+  border-bottom: 2px solid #007bff; /* Borde inferior azul */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 1rem 0; /* Espaciado superior e inferior */
+  overflow: hidden; /* Oculta el texto que sale del contenedor */
+}
+
+/* Estilos para el texto que se desplaza */
+.scrolling-text {
+  position: absolute; /* Posición absoluta para el desplazamiento */
+  white-space: nowrap; /* Evitar que el texto se rompa */
+  animation: scroll 10s linear infinite; /* Animación de desplazamiento */
+  font-size: 2rem; /* Tamaño de fuente incrementado */
+  font-family: 'Roboto', sans-serif; /* Aplicar la fuente Roboto */
+  color: #007bff; /* Color del texto */
+  top: 0; /* Posición en la parte superior del header */
+  left: 100%; /* Comienza fuera del lado derecho */
+  margin-bottom: 1rem; /* Margen inferior para separar del menú de navegación */
+}
+
+/* Definición de la animación */
+@keyframes scroll {
+  0% {
+    transform: translateX(0); /* Comienza justo a la derecha */
+  }
+  100% {
+    transform: translateX(-200%); /* Termina completamente fuera del lado izquierdo */
+  }
+}
+
+/* Espaciado para la navegación */
+.nav {
+  margin-top: 2rem; /* Margen superior para separar del texto desplazado */
+  margin-bottom: 1.5rem; /* Espaciado inferior */
+  display: flex; /* Alineación de elementos en línea */
+  justify-content: center; /* Centrar los enlaces */
+}
+
+/* Estilos del footer */
+footer {
+  background-color: #f8f9fa; /* Color del fondo del footer */
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  padding: 1rem 0; /* Espaciado superior e inferior */
+}
+
+/* Estilos generales para encabezados */
+h1 {
+  font-size: 1.75rem; /* Ajustar el tamaño del título */
+}
+
+/* Estilos para formularios */
+form {
+  background-color: #ffffff; /* Fondo blanco para formularios */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  padding: 2rem; /* Espaciado interno */
+  margin: 2rem 0; /* Margen vertical */
+}
+
+/* Mejora de estilos para etiquetas y entradas */
+.form-group {
+  display: flex; /* Flexbox para alinear label e input */
+  justify-content: flex-start; /* Alineación inicial */
+  align-items: center; /* Alineación vertical */
+  margin-bottom: 1rem; /* Espaciado inferior entre grupos */
+}
+
+.form-label {
+  color: #495057; /* Color de texto de las etiquetas */
+  font-weight: bold; /* Negrita para las etiquetas */
+  width: 150px; /* Ancho fijo para etiquetas */
+  margin-right: 1rem; /* Espaciado a la derecha del label */
+  text-align: left; /* Alineación a la izquierda */
+}
+
+input[type="date"],
+input[type="number"],
+input[type="email"],
+button {
+  border-radius: 0.25rem; /* Esquinas redondeadas */
+  border: 1px solid #ced4da; /* Borde gris claro */
+  flex: 1; /* El input ocupa el espacio restante */
+  padding: 0.5rem; /* Espaciado interno de los inputs */
+}
+
+input[type="date"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus {
+  border-color: #80bdff; /* Color del borde al enfocar */
+  outline: 0; /* Sin borde de enfoque adicional */
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, .25); /* Sombra de enfoque */
+}
+
+button {
+  background-color: #007bff; /* Color de fondo del botón */
+  border: none; /* Sin borde */
+  color: white; /* Texto blanco */
+  padding: 0.5rem 1rem; /* Espaciado interno del botón */
+  border-radius: 0.25rem; /* Esquinas redondeadas */
+  cursor: pointer; /* Cambia el cursor a puntero */
+  transition: background-color 0.2s; /* Transición suave al pasar el ratón */
+}
+
+button:hover {
+  background-color: #0056b3; /* Color al pasar el ratón */
+}
+
+/* Mejora de estilos para los textos */
+.read-the-docs {
+  color: #888;
+}
+
+/* Estilos para enlaces de navegación */
+.nav-item {
+  margin: 0 0.5rem; /* Espaciado entre enlaces */
+}
+
+.nav-link {
+  font-weight: bold; /* Negrita para los enlaces */
+  color: #343a40; /* Color de texto del enlace (oscuro) para mejor contraste */
+  padding: 10px 15px; /* Espaciado interno para enlaces */
+  border-radius: 5px; /* Esquinas redondeadas */
+  transition: background-color 0.3s, color 0.3s; /* Transiciones suaves */
+}
+
+.nav-link:hover {
+  background-color: #007bff; /* Color de fondo al pasar el ratón */
+  color: white; /* Texto blanco al pasar el ratón */
+}
+
+.invoice-list-container {
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+  background-color: #f8f9fa; /* Color de fondo suave */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.invoice-list {
+  list-style-type: none; /* Eliminar viñetas de la lista */
+  padding: 0; /* Sin padding */
+}
+
+.invoice-item {
+  background-color: #ffffff; /* Fondo blanco para los elementos de la lista */
+  padding: 15px;
+  margin-bottom: 10px; /* Espaciado entre elementos */
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s; /* Suave transición de fondo */
+}
+
+.invoice-item:hover {
+  background-color: #e9ecef; /* Color de fondo al pasar el mouse */
+}
+
+.loading-message, .error-message {
+  text-align: center;
+  color: #6c757d; /* Color gris */
+  margin: 20px 0;
+}
+
+.error-message {
+  color: red; /* Color rojo para los mensajes de error */
+}
+
+.text-center {
+  text-align: center; /* Centrar texto */
+}
