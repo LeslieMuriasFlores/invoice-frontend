@@ -6,6 +6,8 @@ import PowerPriceForm from './components/PowerPriceForm';
 import InvoiceCalculator from './components/InvoiceCalculator';
 import InvoiceList from './components/InvoiceList';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap-icons/font/bootstrap-icons.css'; 
 
 const App = () => {
   return (
